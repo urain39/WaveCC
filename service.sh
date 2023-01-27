@@ -16,6 +16,6 @@ CHARGING_ENABLED="/sys/class/power_supply/battery/charging_enabled"
         echo "1" > "$CHARGING_ENABLED"
       fi
     fi
-    sleep 3
+    sleep 15
   done
 ) &

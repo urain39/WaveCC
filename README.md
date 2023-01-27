@@ -1,1 +1,1 @@
-# SimpleChargingControl for m1721
+# Simple Charging Control for m1721
