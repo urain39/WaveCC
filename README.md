@@ -1,1 +1,1 @@
-# Simple Charging Control for m1721
+# Wave Charging Control for m1721
