@@ -7,7 +7,8 @@ CHARGING_ENABLED="/sys/class/power_supply/battery/charging_enabled"
   while :; do
     status="$(cat "$STATUS")"
     capacity="$(cat "$CAPACITY")"
-    if [ "$status" = "Charging" ]; then
+    if [ "$status" = "Charging" ] \
+      || [ "$status" = "Full" ]; then
       if [ "$capacity" -ge "60" ]; then
         echo "0" > "$CHARGING_ENABLED"
       fi
