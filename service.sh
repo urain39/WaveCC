@@ -9,7 +9,7 @@ CHARGING_ENABLED="/sys/class/power_supply/battery/charging_enabled"
     capacity="$(cat "$CAPACITY")"
     if [ "$status" = "Charging" ] \
       || [ "$status" = "Full" ]; then
-      if [ "$capacity" -ge "75" ]; then
+      if [ "$capacity" -ge "65" ]; then
         echo "0" > "$CHARGING_ENABLED"
       fi
     elif [ "$status" = "Discharging" ]; then
